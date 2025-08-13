@@ -9,3 +9,7 @@ export interface Product {
     image: string;
     quanity?: number;
 };
+
+export interface CartState {
+    cartItems: Product[]
+}
