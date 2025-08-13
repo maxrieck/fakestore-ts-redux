@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query"
 import { fetchCategories, fetchProducts } from "../query/api"
-import type { Product } from "../types/types"
+import ProductCards from "../components/ProductCards"
 
 
-const ProductList = () => {
+const ProductList:React.FC = () => {
 
     const { data: products } = useQuery({
         queryKey: ['products'], 
@@ -15,9 +15,9 @@ const ProductList = () => {
     <div>
 
         <ul>
-            {products && products.data && products.data.map((product: Product) => (
-                <li key={product.id}>{product.title}</li>
-            ))}
+            {products && products.data && 
+                <ProductCards products = {products}/>
+            }
         </ul>
 
     </div>

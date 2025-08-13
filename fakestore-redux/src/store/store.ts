@@ -4,6 +4,7 @@ import { persistStore, persistReducer } from "redux-persist";
 import storage from 'redux-persist/lib/storage';
 
 
+
 const persistConfig = {
     key: 'root',
     storage
@@ -20,4 +21,5 @@ export const store = configureStore({
 
 export const persistor = persistStore(store);
 export type RootState = ReturnType<typeof store.getState>;
+// Correctly typed AppDispatch and useAppDispatch hook
 export type AppDispatch = typeof store.dispatch;
