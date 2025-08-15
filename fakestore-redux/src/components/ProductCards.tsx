@@ -19,7 +19,7 @@ const ProductCards: React.FC<ProductCardsProps> = ({ products }) => {
                     <div key={product.id}>
                         <h3>{product.title}</h3>
                         <button onClick={() => dispatch(addCartItem(product))}>Add to cart</button>
-                                            
+                                         
                     </div>
                 ))}
 
