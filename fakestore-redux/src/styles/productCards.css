@@ -1,0 +1,17 @@
+
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+    margin: 1vh;
+    padding: 0 2vh;
+
+}
+
+.product-card img {
+    margin: 0% auto;
+    max-width: 75%;
+    
+
+}

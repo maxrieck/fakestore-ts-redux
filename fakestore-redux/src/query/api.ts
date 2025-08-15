@@ -8,4 +8,4 @@ export const fetchProducts = () => apiClient.get('/products');
 
 export const fetchCategories = () => apiClient.get('/products/categories')
 
-// export const fetchCategoriesProducts = (category:string) => apiClient.get('/products/categories/${category}')
+export const fetchCategoriesProducts = (category:string) => apiClient.get('/products/categories/${category}')
