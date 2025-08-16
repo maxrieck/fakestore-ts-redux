@@ -17,29 +17,35 @@ const ProductList:React.FC = () => {
         queryFn: fetchCategories
     })
 
-    // const { data: category } = useQuery({
-    //     queryKey: ['category'],
-    //     queryFn: fetchCategoriesProducts
-    // })
+    const [category, setCategory] = useState<string>("")
 
-    // const [category, setCategory] = useState<string>("")
+    const { data: fetchedCategory } = useQuery({
+        queryKey: ['category', category],
+        queryFn: () => fetchCategoriesProducts(category),
+        enabled: !!category
+    })
+
 
 
   return (
+    
     <div >
 
         <select onChange={(e) => setCategory(e.target.value)}>
-            {categories && categories.data.map((selectedCategory:string) => 
-                <option value={selectedCategory}>{selectedCategory}</option>
+            <option value="">All</option>
+            {categories && categories.data.map((selectedCategory: string, index: number) => 
+                <option key={index} value={selectedCategory}>{selectedCategory}</option>
             )}
         </select>
 
-
-
         <div className="product-list">
-            {products && products.data && 
-                <ProductCards products = {products}/>
-            }
+            {category === "" && products && products.data && (
+                <ProductCards products={products} />
+            )}
+
+            {category !== "" && fetchedCategory && fetchedCategory.data && (
+                <ProductCards products={fetchedCategory} />
+            )}
         </div>
 
     </div>

@@ -10,9 +10,11 @@ interface ProductCardsProps {
     products: AxiosResponse<Product[]>;
 }
 
-const ProductCards: React.FC<ProductCardsProps> = ({ products }) => {
 
+const ProductCards: React.FC<ProductCardsProps> = ({ products }) => {
     const dispatch = useDispatch<AppDispatch>();
+    
+    console.log('ProductCards products:', products.data);
 
     return (
         <>
@@ -24,10 +26,8 @@ const ProductCards: React.FC<ProductCardsProps> = ({ products }) => {
                     <h4>{product.price}</h4>
                     <h4>{product.category}</h4>
                     <button onClick={() => dispatch(addCartItem(product))}>Add to cart</button>
-
                 </div>
             ))}
-
         </>
     )
 }
