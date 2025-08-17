@@ -34,6 +34,10 @@
     display: block;
 }
 
+.product-card h4 {
+    font-size: medium;
+}
+
 .card-title {
     font-size: medium;
     white-space: nowrap;

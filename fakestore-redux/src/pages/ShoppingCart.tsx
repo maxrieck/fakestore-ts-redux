@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { type AppDispatch, type RootState } from '../store/store';
-import { emptyCart, removeCartItem } from '../store/cartSlice';
+import { emptyCart } from '../store/cartSlice';
 import { useDispatch } from 'react-redux';
 import CartItems from '../components/CartItems';
 
@@ -11,7 +11,7 @@ const ShoppingCart: React.FC = () => {
   const currentCart = useSelector((state: RootState) => state.cartItems.cartItems);
   const dispatch = useDispatch<AppDispatch>();
 
-  // Defensive: handle undefined cartItems
+  
   const safeCart = currentCart ?? [];
 
   return (
