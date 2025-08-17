@@ -1,24 +1,30 @@
 
+
 .product-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    padding: 1rem 0;
+    gap: 1rem 0;
 }
 
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
     .product-list {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .product-list {
         grid-template-columns: repeat(2, 1fr);
+        margin: auto 1vw;
     }
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
     .product-list {
         grid-template-columns: 1fr;
+        margin: auto 2vw;
     }
-}   
+}    */

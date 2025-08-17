@@ -2,15 +2,18 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import '../styles/navbar.css'
 
 
 const NavBar = () => {
+
   return (
-     <Navbar expand="lg" className="bg-body-tertiary">
+    <>
+     <Navbar expand="lg" fixed='top' className="navbar bg-body-tertiary">
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand href="/">FS</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/productlist">Link</Nav.Link>
@@ -30,6 +33,8 @@ const NavBar = () => {
             <Nav.Link href='/shoppingcart'>Cart</Nav.Link>
       </Container>
     </Navbar>
+    <div style={{height:"30px"}}></div>
+    </>
   )
 }
 

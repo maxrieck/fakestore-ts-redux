@@ -24,12 +24,11 @@ const ProductList:React.FC = () => {
         queryFn: () => fetchCategoriesProducts(category),
         enabled: !!category
     })
-
-
+ 
 
   return (
-    
-    <div >
+    <div className="product-container">
+      {!products && <div>Loading...</div>}
 
         <select onChange={(e) => setCategory(e.target.value)}>
             <option value="">All</option>
@@ -37,7 +36,7 @@ const ProductList:React.FC = () => {
                 <option key={index} value={selectedCategory}>{selectedCategory}</option>
             )}
         </select>
-
+            
         <div className="product-list">
             {category === "" && products && products.data && (
                 <ProductCards products={products} />

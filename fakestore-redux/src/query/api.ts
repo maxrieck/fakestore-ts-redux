@@ -9,4 +9,4 @@ export const fetchProducts = () => apiClient.get('/products');
 export const fetchCategories = () => apiClient.get('/products/categories')
 
 export const fetchCategoriesProducts = (category: string) => 
-    apiClient.get(`/products/category/${encodeURIComponent(category)}`)
+    apiClient.get(`/products/category/${category}`)

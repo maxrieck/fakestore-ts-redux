@@ -3,15 +3,48 @@
 .product-card {
     display: flex;
     flex-direction: column;
-    border: solid 1px;
-    margin: 1vh;
-    padding: 0 2vh;
+    text-align: center;
+    width: 90%;
+    max-width: 350px;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    border: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    
+}
 
+.product-card a {
+    text-decoration: none;
+    color: black;
+}
+
+.image-div {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    margin: 2rem auto;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .product-card img {
-    margin: 0% auto;
-    max-width: 75%;
-    
-
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
+
+.card-title {
+    font-size: medium;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
+    box-sizing: border-box;
+    
+}
+
+.product-button {
+    margin-bottom: 0.5rem;
+}
+

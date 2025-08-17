@@ -3,28 +3,23 @@ import { useSelector } from 'react-redux';
 import { type AppDispatch, type RootState } from '../store/store';
 import { emptyCart, removeCartItem } from '../store/cartSlice';
 import { useDispatch } from 'react-redux';
+import CartItems from '../components/CartItems';
 
 
-const ShoppingCart:React.FC = () => {
 
-    const currentCart = useSelector((state: RootState) => state.cartItems.cartItems)
-    const dispatch = useDispatch<AppDispatch>()
+const ShoppingCart: React.FC = () => {
+  const currentCart = useSelector((state: RootState) => state.cartItems.cartItems);
+  const dispatch = useDispatch<AppDispatch>();
 
+  // Defensive: handle undefined cartItems
+  const safeCart = currentCart ?? [];
 
   return (
-    <div>
-        {currentCart.map((product, index: number) => (
-            <div key={index}>
-                <h4>{product.title}</h4>
-                 <button onClick={() => dispatch(removeCartItem(product))}>X</button>
-            </div>
-        ))}
-
-        <button onClick={() => dispatch(emptyCart())}>Empty Cart</button>
-
-    </div>
-
-  )
+      <>
+        <CartItems cartItems={safeCart} />
+        <button onClick={()=>dispatch(emptyCart())}>Empty Cart</button>
+      </>
+  );
 }
 
 export default ShoppingCart;
