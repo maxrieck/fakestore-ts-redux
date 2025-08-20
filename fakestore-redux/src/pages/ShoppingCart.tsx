@@ -18,7 +18,9 @@ const ShoppingCart: React.FC = () => {
   return (
       <PageLayout>
         <CartItems cartItems={safeCart} />
-        <button onClick={()=>dispatch(emptyCart())}>Empty Cart</button>
+        <button className='button-theme'
+          onClick={()=>dispatch(emptyCart())
+          }>Empty Cart</button>
       </PageLayout>
   );
 }

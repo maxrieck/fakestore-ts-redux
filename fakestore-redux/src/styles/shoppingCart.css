@@ -38,10 +38,10 @@
     width: 2rem;
     height: auto;
     text-align: center;
+    border: none;
 }
 
 .cart-button:hover {
     background-color: rgba(232, 232, 232, 0.588);
     color: black;
-    border: none;
 }

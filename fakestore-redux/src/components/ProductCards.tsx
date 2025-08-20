@@ -33,7 +33,9 @@ const ProductCards: React.FC<ProductCardsProps> = ({ products }) => {
                         </Card.Body>
                     </Link>
                     <div className='product-button'>
-                        <button onClick={() => {
+                        <button 
+                        className='button-theme'
+                        onClick={() => {
                             dispatch(addCartItem(product));
                             dispatch(increaseQuantity(product));
                         }}>

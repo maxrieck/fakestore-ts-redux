@@ -33,7 +33,7 @@ const CartItems: React.FC<CartItemsProps> = ({ cartItems }) => {
               >+</button>
             </div>
           </div>
-          <button className='cart-button'
+          <button className='cart-button button-theme'
             onClick={() => dispatch(removeCartItem(product))}
           >X</button>
         </div>
