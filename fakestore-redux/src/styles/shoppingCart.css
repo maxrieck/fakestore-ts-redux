@@ -11,6 +11,10 @@
     margin: 1rem;
 }
 
+.cart-item p {
+    margin: auto;
+}
+
 .cart-item img {
     border: solid 1px;
     padding: 5px;
@@ -25,4 +29,19 @@
     width: 90%;
     box-sizing: border-box;
 
+}
+
+.cart-button {
+    background-color: white;
+    color: rgb(165, 165, 165);
+    border-radius: 5px;
+    width: 2rem;
+    height: auto;
+    text-align: center;
+}
+
+.cart-button:hover {
+    background-color: rgba(232, 232, 232, 0.588);
+    color: black;
+    border: none;
 }

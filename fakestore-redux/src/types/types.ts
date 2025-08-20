@@ -7,7 +7,7 @@ export interface Product {
     description: string;
     category: string;
     image: string;
-    quanity?: number;
+    quantity?: number;
 };
 
 export interface CartState {
