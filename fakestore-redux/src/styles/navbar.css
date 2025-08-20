@@ -1,5 +1,7 @@
 
 
-.navbar {
-    margin-bottom: 100px;
+.custom-navbar {
+    margin: 1rem;
+    color: whitesmoke;
+    background-color: rgb(122, 111, 111);
 }

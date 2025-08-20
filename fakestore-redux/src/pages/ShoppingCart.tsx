@@ -4,6 +4,7 @@ import { type AppDispatch, type RootState } from '../store/store';
 import { emptyCart } from '../store/cartSlice';
 import { useDispatch } from 'react-redux';
 import CartItems from '../components/CartItems';
+import PageLayout from '../components/PageLayout';
 
 
 
@@ -15,10 +16,10 @@ const ShoppingCart: React.FC = () => {
   const safeCart = currentCart ?? [];
 
   return (
-      <>
+      <PageLayout>
         <CartItems cartItems={safeCart} />
         <button onClick={()=>dispatch(emptyCart())}>Empty Cart</button>
-      </>
+      </PageLayout>
   );
 }
 

@@ -8,8 +8,9 @@ import '../styles/navbar.css'
 const NavBar = () => {
 
   return (
+
     <>
-     <Navbar expand="lg" fixed='top' className="navbar bg-body-tertiary">
+     <Navbar expand="lg" fixed='top' className='custom-navbar'>
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -33,8 +34,9 @@ const NavBar = () => {
             <Nav.Link href='/shoppingcart'>Cart</Nav.Link>
       </Container>
     </Navbar>
-    <div style={{height:"30px"}}></div>
+    
     </>
+    
   )
 }
 

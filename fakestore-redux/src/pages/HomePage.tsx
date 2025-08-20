@@ -1,17 +1,13 @@
-import ProductList from './ProductList';
-import ShoppingCart from './ShoppingCart';
+import PageLayout from '../components/PageLayout';
+
 
 const HomePage = () => {
 
   return (
-    <div>
+    <PageLayout>
         <h1>Main Page</h1>
-        <h2>Cart</h2>
-        <ShoppingCart />
-
-        <h2>Products</h2>
-        <ProductList />
-    </div>
+        
+    </PageLayout>
   )
 }
 

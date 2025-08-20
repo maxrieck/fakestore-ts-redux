@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query"
 import { fetchCategories, fetchProducts, fetchCategoriesProducts } from "../query/api"
 import ProductCards from "../components/ProductCards"
 import '../styles/productList.css'
+import PageLayout from "../components/PageLayout"
 
 
 const ProductList:React.FC = () => {
@@ -27,6 +28,9 @@ const ProductList:React.FC = () => {
  
 
   return (
+
+    <PageLayout>
+    
     <div className="product-container">
       {!products && <div>Loading...</div>}
 
@@ -48,6 +52,8 @@ const ProductList:React.FC = () => {
         </div>
 
     </div>
+    
+    </PageLayout>
   )
 }
 
