@@ -29,6 +29,7 @@
 .product-page h4 {
     grid-column: 1 / 4 ;
     grid-row: 3 / 4 ;    
+    align-content: center;
 }
 
 .product-page p {
@@ -36,3 +37,7 @@
     grid-row: 4 / 5 ;   
 }
 
+.button-div {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}

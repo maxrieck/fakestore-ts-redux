@@ -6,6 +6,7 @@ import type { Product } from '../types/types'
 import PageLayout from '../components/PageLayout'
 import '../styles/productPage.css'
 import { Link } from 'react-router-dom'
+import AddCartButton from '../components/AddCartButton'
 
 const ProductPage: React.FC = () => {
 
@@ -31,6 +32,9 @@ const ProductPage: React.FC = () => {
           <img src={product.image} alt="" />
           <h4>{product.price}</h4>
           <p>{product.description}</p>
+          <div className='button-div'>
+            <AddCartButton product={product}/>
+          </div>
         </div>
       ) : (
         <h4>Item not found.</h4>
