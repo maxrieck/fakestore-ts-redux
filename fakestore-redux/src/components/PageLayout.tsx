@@ -12,7 +12,7 @@ const PageLayout:React.FC<PageLayoutProps>
 
 
   return (
-    <body className='page-layout'>
+    <div className='page-layout'>
 
         <header className=''>
             <NavBar />
@@ -26,7 +26,7 @@ const PageLayout:React.FC<PageLayoutProps>
 
         </footer>
 
-    </body>
+    </div>
   )
 }
 

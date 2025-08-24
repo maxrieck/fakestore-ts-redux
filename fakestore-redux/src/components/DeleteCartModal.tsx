@@ -1,34 +1,29 @@
-
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import '../styles/cartModal.css'
 
 interface DeleteCartModalProps {
   onClose: () => void;
 }
 
 const DeleteCartModal: React.FC<DeleteCartModalProps> = ({ onClose }) => {
+  const [isFading, setIsFading] = useState<boolean>(false);
+
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const fadeTimer = setTimeout(() => {
+      setIsFading(true);
+    }, 1500);
+    const closeTimer = setTimeout(() => {
       onClose();
     }, 2000);
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(closeTimer);
+    };
   }, [onClose]);
 
   return (
-    <div style={{
-      border: 'none',
-      padding: '0 2rem',
-      textAlign: 'center',
-      zIndex: '9999',
-      boxShadow: '0 0.5px 2px black',
-      position: 'fixed',
-      top: '85px',
-      left: '80%',
-      transform: 'translateX(-50%)',
-      backgroundColor: 'white',
-    }}>
-      
-      <h4>Item removed from cart!</h4>
-      
+    <div className={`cart-modal${isFading ? ' fade' : ' show'}`}>      
+      <h4>Item removed from cart!</h4>      
     </div>
   );
 }

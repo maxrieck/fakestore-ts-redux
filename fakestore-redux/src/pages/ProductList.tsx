@@ -27,34 +27,27 @@ const ProductList:React.FC = () => {
     })
  
 
-  return (
-
-    <PageLayout>
-    
-    <div className="product-container">
-      {!products && <div>Loading...</div>}
-
-        <select onChange={(e) => setCategory(e.target.value)}>
-            <option value="">All</option>
-            {categories && categories.data.map((selectedCategory: string, index: number) => 
-                <option key={index} value={selectedCategory}>{selectedCategory}</option>
-            )}
-        </select>
-            
-        <div className="product-list">
-            {category === "" && products && products.data && (
-                <ProductCards products={products} />
-            )}
-
-            {category !== "" && fetchedCategory && fetchedCategory.data && (
-                <ProductCards products={fetchedCategory} />
-            )}
-        </div>
-
-    </div>
-    
-    </PageLayout>
-  )
+    return (
+        <PageLayout>
+            <div className="product-container">
+                {!products && <div>Loading...</div>}
+                <select onChange={(e) => setCategory(e.target.value)}>
+                    <option value="">All</option>
+                    {categories && categories.data.map((selectedCategory: string, index: number) => (
+                        <option key={index} value={selectedCategory}>{selectedCategory}</option>
+                    ))}
+                </select>
+                <div className="product-list">
+                    {category === "" && products && products.data && (
+                        <ProductCards products={products} />
+                    )}
+                    {category !== "" && fetchedCategory && fetchedCategory.data && (
+                        <ProductCards products={fetchedCategory} />
+                    )}
+                </div>
+            </div>
+        </PageLayout>
+    )
 }
 
 export default ProductList

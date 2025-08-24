@@ -11,6 +11,7 @@ import AddCartModal from './AddCartModal';
 
 interface ProductCardsProps {
     products: AxiosResponse<Product[]>;
+    onAddToCart?: () => void;
 }
 
 
@@ -20,14 +21,13 @@ const ProductCards: React.FC<ProductCardsProps> = ({ products }) => {
 
     const [showModal, setShowModal] = useState<boolean>(false)
 
-    const handleCartModal = () => {
+    const handleModal = () => {
         setShowModal(true)
     }
 
-
     return (
-        <>
-            {showModal && <AddCartModal onClose={() => setShowModal(false)} />}
+        <>  
+            {showModal && <AddCartModal onClose={()=>setShowModal(false)}/>}
             {products.data.map((product: Product) => (
                 <Card key={product.id} className='product-card'>
                     <Link to={`/productpage/${product.id}`}>
@@ -46,7 +46,7 @@ const ProductCards: React.FC<ProductCardsProps> = ({ products }) => {
                         onClick={() => {
                             dispatch(addCartItem(product));
                             dispatch(increaseQuantity(product));
-                            handleCartModal();
+                            handleModal();
                         }}>
                             Add to cart
                         </button>

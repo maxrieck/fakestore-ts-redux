@@ -1,0 +1,23 @@
+
+.cart-modal {
+    border: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    z-index: 9999 !important;
+    box-shadow: 0 0.5px 2px black;
+    position: fixed !important;
+    top: 85px !important;
+    left: auto !important;
+    right: 25px !important;
+    background-color: white;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.cart-modal.fade {
+    opacity: 0;
+}
+
+.cart-modal.show {
+    opacity: 1;
+}

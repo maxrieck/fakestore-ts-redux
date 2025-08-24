@@ -1,31 +1,30 @@
-
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import '../styles/cartModal.css'
 
 interface AddCartModalProps {
   onClose: () => void;
 }
 
 const AddCartModal: React.FC<AddCartModalProps> = ({ onClose }) => {
-  useEffect(() => {
-    const timer = setTimeout(() => {
+
+    const [isFading, setIsFading] = useState<boolean>(false)
+    
+    useEffect(() => {
+    const fadeTimer = setTimeout(() => {
+      setIsFading(true);
+    }, 1500);
+    const closeTimer = setTimeout(() => {
       onClose();
     }, 2000);
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(closeTimer);
+    };
   }, [onClose]);
 
   return (
-    <div style={{
-      border: 'none',
-      padding: '0 2rem',
-      textAlign: 'center',
-      zIndex: '9999',
-      boxShadow: '0 0.5px 2px black',
-      position: 'fixed',
-      top: '85px',
-      left: '80%',
-      transform: 'translateX(-50%)',
-      backgroundColor: 'white',
-    }}>
+    <div className={`cart-modal ${isFading ? 'fade' : 'show'}`}>
+    
       
       <h4>Item added to cart!</h4>
       
