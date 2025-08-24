@@ -2,7 +2,7 @@
 .product-page {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 15% 45% 10% 20% 10%;
+    grid-template-rows: 15% 45% 5% 5% 20%;
     box-shadow: 0 0.2px 1px black;
     height: 95%;
     width: 95%;
@@ -34,10 +34,21 @@
 
 .product-page p {
     grid-column: 1 / 4 ;
-    grid-row: 4 / 5 ;   
+    grid-row: 5 / 6 ;   
 }
 
 .button-div {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+}
+
+@media (max-width: 800px) {
+    .button-div {
+        grid-column: 3 / 5;
+    }
+}
+
+.product-page h5 {
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
 }

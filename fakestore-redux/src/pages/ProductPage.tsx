@@ -30,7 +30,8 @@ const ProductPage: React.FC = () => {
         <div className='product-page mt-3'>
           <h3>{product.title}</h3>
           <img src={product.image} alt="" />
-          <h4>{product.price}</h4>
+          <h4>Price: ${product.price.toFixed(2)}</h4>
+          <h5>Description</h5>
           <p>{product.description}</p>
           <div className='button-div'>
             <AddCartButton product={product}/>
