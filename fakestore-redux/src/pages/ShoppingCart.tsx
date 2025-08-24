@@ -5,6 +5,7 @@ import { emptyCart } from '../store/cartSlice';
 import { useDispatch } from 'react-redux';
 import CartItems from '../components/CartItems';
 import PageLayout from '../components/PageLayout';
+import CartTotal from '../components/CartTotal';
 
 
 
@@ -17,10 +18,15 @@ const ShoppingCart: React.FC = () => {
 
   return (
       <PageLayout>
+
         <CartItems cartItems={safeCart} />
+
+        <CartTotal />
+
         <button className='button-theme'
           onClick={()=>dispatch(emptyCart())
           }>Empty Cart</button>
+
       </PageLayout>
   );
 }

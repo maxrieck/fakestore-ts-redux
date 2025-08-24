@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import type { AppDispatch } from '../store/store'
-import { addCartItem, increaseQuantity } from '../store/cartSlice';
+import { addCartItem, } from '../store/cartSlice';
 import type { Product } from '../types/types'
 import AddCartModal from './AddCartModal';
 
@@ -29,7 +29,6 @@ const AddCartButton:React.FC<AddCartButtonProps>= ({ product }) => {
     <button 
         onClick={() => {
             dispatch(addCartItem(product));
-            dispatch(increaseQuantity(product));
             handleModal();
         }}
         className='button-theme'

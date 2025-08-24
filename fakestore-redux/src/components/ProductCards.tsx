@@ -24,7 +24,7 @@ const ProductCards: React.FC<ProductCardsProps> = ({ products }) => {
                         </Card.Header>
                         <h4 className='card-title'>{product.title}</h4>
                         <Card.Body>
-                            <h4>Price: ${product.price}</h4>
+                            <h4>Price: ${product.price.toFixed(2)}</h4>
                             <p>{product.category}</p>
                         </Card.Body>
                     </Link>

@@ -30,7 +30,7 @@ const CartItems: React.FC<CartItemsProps> = ({ cartItems }) => {
           <img src={product.image} alt="" />
           <h4>{product.title}</h4>
           <div>
-            <p>${product.price}</p>
+            <p>${product.price.toFixed(2)}</p>
             <div style={{display:'flex'}}>
               <button className='cart-button'
                 onClick={() => dispatch(decreaseQuantity(product))}
