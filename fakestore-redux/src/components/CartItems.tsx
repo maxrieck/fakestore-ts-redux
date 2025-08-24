@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { removeCartItem, increaseQuantity, decreaseQuantity } from '../store/cartSlice';
 import type { AppDispatch } from '../store/store';
 import type { Product } from '../types/types';
 import '../styles/shoppingCart.css'
+import DeleteCartModal from './DeleteCartModal';
 
 
 interface CartItemsProps {
@@ -14,9 +15,16 @@ const CartItems: React.FC<CartItemsProps> = ({ cartItems }) => {
 
   const dispatch = useDispatch<AppDispatch>()
 
+  const [showModal, setShowModal] = useState<boolean>(false)
+
+  const handleModal = () => {
+      setShowModal(true)
+  }
+
 
   return (
     <>
+      {showModal && <DeleteCartModal onClose={()=>setShowModal(false)}/>}
       {cartItems.map((product: Product, index: number) => (
         <div key={index} className='cart-item'>
           <img src={product.image} alt="" />
@@ -34,7 +42,10 @@ const CartItems: React.FC<CartItemsProps> = ({ cartItems }) => {
             </div>
           </div>
           <button className='cart-button button-theme'
-            onClick={() => dispatch(removeCartItem(product))}
+            onClick={() => {
+              dispatch(removeCartItem(product));
+              handleModal()
+            }}
           >X</button>
         </div>
       ))}

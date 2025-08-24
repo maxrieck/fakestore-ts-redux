@@ -14,14 +14,14 @@
 }
 
 .button-theme {
-  margin: 2rem;
+  margin: 1rem;
   text-decoration: none;
-  border-radius: 5px;
   background-color: rgb(92, 91, 102);
   color: whitesmoke;
   padding: 0.5rem;
   transition: 0.25s;
   border: none;
+  box-shadow: 0 0.1px 0.6px black;
 }
 
 .button-theme:hover {

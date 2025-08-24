@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import '../styles/navbar.css'
 
 
-const NavBar = () => {
+const NavBar:React.FC = () => {
 
   return (
 

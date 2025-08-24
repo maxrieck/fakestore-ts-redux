@@ -4,7 +4,7 @@ import { fetchProducts } from '../query/api'
 import { useParams } from 'react-router-dom'
 import type { Product } from '../types/types'
 import PageLayout from '../components/PageLayout'
-import '../styles/product-page.css'
+import '../styles/productPage.css'
 import { Link } from 'react-router-dom'
 
 const ProductPage: React.FC = () => {
@@ -26,7 +26,7 @@ const ProductPage: React.FC = () => {
       <Link className='button-theme' to='/productlist'>Back to Products</Link>
 
       {product ? (
-        <div className='product-page'>
+        <div className='product-page mt-3'>
           <h3>{product.title}</h3>
           <img src={product.image} alt="" />
           <h4>{product.price}</h4>

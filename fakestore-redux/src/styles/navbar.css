@@ -4,5 +4,5 @@
     /* margin: 1rem; */
     color: whitesmoke;
     background-color: rgb(92, 91, 102);
-    box-shadow: 1px 3px 7px rgb(0, 0, 0);
+    box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.623);
 }

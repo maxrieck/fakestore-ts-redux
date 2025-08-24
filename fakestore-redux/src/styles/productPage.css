@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 15% 45% 10% 20% 10%;
-    border: solid 1px;
+    box-shadow: 0 0.2px 1px black;
     height: 95%;
     width: 95%;
     margin: 0 auto;

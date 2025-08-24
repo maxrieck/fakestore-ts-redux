@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import type { Product } from '../types/types'
 import type { AxiosResponse } from 'axios';
 import { addCartItem, increaseQuantity } from '../store/cartSlice';
@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import '../styles/productCards.css'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import AddCartModal from './AddCartModal';
 
 interface ProductCardsProps {
     products: AxiosResponse<Product[]>;
@@ -14,12 +15,19 @@ interface ProductCardsProps {
 
 
 const ProductCards: React.FC<ProductCardsProps> = ({ products }) => {
+
     const dispatch = useDispatch<AppDispatch>();
 
-    console.log('ProductCards products:', products.data);
+    const [showModal, setShowModal] = useState<boolean>(false)
+
+    const handleCartModal = () => {
+        setShowModal(true)
+    }
+
 
     return (
         <>
+            {showModal && <AddCartModal onClose={() => setShowModal(false)} />}
             {products.data.map((product: Product) => (
                 <Card key={product.id} className='product-card'>
                     <Link to={`/productpage/${product.id}`}>
@@ -38,6 +46,7 @@ const ProductCards: React.FC<ProductCardsProps> = ({ products }) => {
                         onClick={() => {
                             dispatch(addCartItem(product));
                             dispatch(increaseQuantity(product));
+                            handleCartModal();
                         }}>
                             Add to cart
                         </button>
