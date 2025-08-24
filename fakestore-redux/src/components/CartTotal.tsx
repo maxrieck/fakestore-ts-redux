@@ -18,7 +18,8 @@ const CartTotal: React.FC = () => {
 
     return (
         <>
-            <div>
+            <hr className='m-2' />
+            <div className='cart-total'>
                 <h3>Total Price: ${priceTotal.toFixed(2)}</h3>
             </div>
         </>

@@ -49,6 +49,7 @@ const ProductList:React.FC = () => {
                         <ProductCards products={fetchedCategory} />
                     )}
                 </div>
+                
             </div>
         </PageLayout>
     )

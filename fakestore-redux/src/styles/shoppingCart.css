@@ -50,3 +50,8 @@
     background-color: rgba(232, 232, 232, 0.437);
     color: black;
 }
+
+
+.cart-total {
+    text-align: right;
+}
