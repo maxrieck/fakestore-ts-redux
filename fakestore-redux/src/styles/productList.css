@@ -25,9 +25,26 @@
     }
 }
 
-/* @media (max-width: 500px) {
-    .product-list {
-        grid-template-columns: 1fr;
-        margin: auto 2vw;
-    }
-}    */
+.category-selector {
+    position: sticky;
+    text-align: center;
+    background-color: rgb(233, 231, 231);
+    width: 80%;
+    border-radius: 25px;
+    margin-left: 4rem;
+
+}
+
+.category-selector button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: rgb(233, 231, 231);
+    border: none;
+    border-radius: 25px;
+    text-transform: capitalize;
+}
+
+.category-selector button:hover {
+    background-color: rgb(179, 179, 179);
+    color: rgb(255, 255, 255);
+}

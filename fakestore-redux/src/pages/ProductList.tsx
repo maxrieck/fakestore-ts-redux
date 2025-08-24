@@ -30,13 +30,17 @@ const ProductList:React.FC = () => {
     return (
         <PageLayout>
             <div className="product-container">
+                
                 {!products && <div>Loading...</div>}
-                <select onChange={(e) => setCategory(e.target.value)}>
-                    <option value="">All</option>
+                <div className="category-selector">
+                    <button onClick={() => setCategory("")} value="">All</button>
                     {categories && categories.data.map((selectedCategory: string, index: number) => (
-                        <option key={index} value={selectedCategory}>{selectedCategory}</option>
+                        <button key={index} value={selectedCategory}
+                            onClick={() => setCategory(selectedCategory)}
+                        >{selectedCategory}</button>
                     ))}
-                </select>
+                </div>
+
                 <div className="product-list">
                     {category === "" && products && products.data && (
                         <ProductCards products={products} />
