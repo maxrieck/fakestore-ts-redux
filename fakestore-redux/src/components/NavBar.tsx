@@ -14,7 +14,7 @@ const NavBar:React.FC = () => {
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Navbar.Brand className='text-white' href="/">FS</Navbar.Brand>
+          <Navbar.Brand className='text-white px-3' href="/">FS</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link className='text-white' href="/">Home</Nav.Link>
             <Nav.Link className='text-white' href="/productlist">Products</Nav.Link>
@@ -31,7 +31,7 @@ const NavBar:React.FC = () => {
             </NavDropdown> */}
           </Nav>
         </Navbar.Collapse>
-            <Nav.Link href='/shoppingcart'>Cart</Nav.Link>
+            <Nav.Link className='p-1 px-3' href='/shoppingcart'>Cart</Nav.Link>
       </Container>
     </Navbar>
     

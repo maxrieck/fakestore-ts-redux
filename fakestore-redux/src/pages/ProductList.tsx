@@ -41,6 +41,8 @@ const ProductList:React.FC = () => {
                     ))}
                 </div>
 
+                
+
                 <div className="product-list">
                     {category === "" && products && products.data && (
                         <ProductCards products={products} />
@@ -49,7 +51,7 @@ const ProductList:React.FC = () => {
                         <ProductCards products={fetchedCategory} />
                     )}
                 </div>
-                
+
             </div>
         </PageLayout>
     )
