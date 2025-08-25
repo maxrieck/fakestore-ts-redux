@@ -4,6 +4,7 @@ import '../styles/productCards.css'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import AddCartButton from './AddCartButton';
+import '/public/images/shop-placeholder.png'
 
 interface ProductCardsProps {
     products: AxiosResponse<Product[]>;
@@ -20,7 +21,9 @@ const ProductCards: React.FC<ProductCardsProps> = ({ products }) => {
                 <Card key={product.id} className='product-card'>
                     <Link to={`/productpage/${product.id}`}>
                         <Card.Header className='image-div'>
-                            <img src={product.image} alt="product image" />
+                            <img src={product.image} alt={product.title}
+                                onError={(e) => {e.currentTarget.src = '/public/images/shop-placeholder.png';}}
+                            />
                         </Card.Header>
                         <h4 className='card-title'>{product.title}</h4>
                         <Card.Body>
