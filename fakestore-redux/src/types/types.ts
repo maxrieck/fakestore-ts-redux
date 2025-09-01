@@ -13,3 +13,9 @@ export interface Product {
 export interface CartState {
     cartItems: Product[]
 }
+
+export interface User {
+    id?: string;
+    name: string;
+    age: number;
+}

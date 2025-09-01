@@ -18,6 +18,7 @@ const NavBar:React.FC = () => {
           <Nav className="me-auto">
             <Nav.Link className='text-white' href="/">Home</Nav.Link>
             <Nav.Link className='text-white' href="/productlist">Products</Nav.Link>
+            <Nav.Link className='text-white' href="/addUser">Users</Nav.Link>
             {/* <NavDropdown className='text-white' title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
