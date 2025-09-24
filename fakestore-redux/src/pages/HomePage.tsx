@@ -1,31 +1,51 @@
 import PageLayout from '../components/PageLayout';
-import '/public/images/cotton-jacket.jpg'
-import '/public/images/snow-jacket.jpg'
-import '/public/images/black-jacket.jpg'
 import '../styles/homePage.css'
 import '/public/images/wd-banner.jpg'
+import HomeBanner from '../components/HomeBanner';
+// import { useEffect, useState } from "react";
+// import { onAuthStateChanged, type User } from "firebase/auth";
+// import { auth } from "../firebase/firebaseConfig";
+// import Register from "./UserRegistration";
+// import Login from "../components/Login";
 
 
-const HomePage = () => {
+
+const HomePage: React.FC = () => {
+
+  // const [user, setUser] = useState<User | null>(null);
+
+  // useEffect(() => {
+  //   const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+  //     setUser(currentUser);
+  //   });
+  //   return () => unsubscribe();
+  // }, []);
 
   return (
     <PageLayout>
       <div className='homepage'>
-
-        
-
-        <div className='jacket-banner'>
-          <img src="/public/images/cotton-jacket.jpg" alt="" />
-          <img src="/public/images/black-jacket.jpg" alt="" />
-          <img src="/public/images/snow-jacket.jpg" alt="" />
+        {/*       
+         {user ? (
+        <div>
+          <h2>Welcome, {user.email}</h2>
+          <Login /> 
         </div>
-        
+      ) : (
+        <>
+          <Register />
+          <Login />
+        </>
+      )} */}
+
+
+        <HomeBanner />
+
         <hr />
 
         <div className="wd-banner">
-          <img src="/public/images/wd-banner.jpg" alt="" />
+          <img src="/images/wd-banner.jpg" alt="" />
         </div>
-        
+
       </div>
     </PageLayout>
   )

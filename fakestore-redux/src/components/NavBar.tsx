@@ -16,7 +16,7 @@ const NavBar:React.FC = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Navbar.Brand className='text-white px-3' href="/">FS</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link className='text-white' href="/">Home</Nav.Link>
+            {/* <Nav.Link className='text-white' href="/">Home</Nav.Link> */}
             <Nav.Link className='text-white' href="/productlist">Products</Nav.Link>
             <Nav.Link className='text-white' href="/addUser">Users</Nav.Link>
             {/* <NavDropdown className='text-white' title="Dropdown" id="basic-nav-dropdown">
