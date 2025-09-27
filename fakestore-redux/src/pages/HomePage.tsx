@@ -24,6 +24,7 @@ const HomePage: React.FC = () => {
   return (
     <PageLayout>
       <div className='homepage'>
+
         {/*       
          {user ? (
         <div>
@@ -41,10 +42,13 @@ const HomePage: React.FC = () => {
         <HomeBanner />
 
         <hr />
+        
+        <HomeBanner />
+        <hr />
 
-        <div className="wd-banner">
+        {/* <div className="wd-banner">
           <img src="/images/wd-banner.jpg" alt="" />
-        </div>
+        </div> */}
 
       </div>
     </PageLayout>

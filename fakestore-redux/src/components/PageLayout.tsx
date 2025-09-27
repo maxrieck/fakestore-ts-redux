@@ -14,9 +14,9 @@ const PageLayout:React.FC<PageLayoutProps>
   return (
     <div className='page-layout'>
 
-        <header className=''>
+        
             <NavBar />
-        </header>
+        
 
         <main>
             {children}

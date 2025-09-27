@@ -24,6 +24,9 @@ const ProductPage: React.FC = () => {
 
     <PageLayout>
 
+      <div style={{margin:'5rem 1rem'}}>
+
+
       <Link className='button-theme' to='/productlist'>Back to Products</Link>
 
       {product ? (
@@ -41,6 +44,7 @@ const ProductPage: React.FC = () => {
         <h4>Item not found.</h4>
       )}
 
+      </div>
     </PageLayout>
   )
 }

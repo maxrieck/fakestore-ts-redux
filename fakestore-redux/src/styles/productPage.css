@@ -43,9 +43,17 @@
 }
 
 @media (max-width: 800px) {
-    .button-div {
-        grid-column: 3 / 5;
+    .product-page {
+        display: flex;
+        flex-direction: column;
+        margin: 0
     }
+
+    .product-page img {
+        width: 250px;
+        height: auto;
+    }
+    
 }
 
 .product-page h5 {

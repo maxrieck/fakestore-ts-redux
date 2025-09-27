@@ -3,6 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../styles/navbar.css'
+import { FaShoppingCart } from 'react-icons/fa';
+import { AiFillShopping } from 'react-icons/ai';
+import { FaCartShopping } from 'react-icons/fa6';
 
 
 const NavBar:React.FC = () => {
@@ -17,8 +20,8 @@ const NavBar:React.FC = () => {
           <Navbar.Brand className='text-white px-3' href="/">FS</Navbar.Brand>
           <Nav className="me-auto">
             {/* <Nav.Link className='text-white' href="/">Home</Nav.Link> */}
-            <Nav.Link className='text-white' href="/productlist">Products</Nav.Link>
-            <Nav.Link className='text-white' href="/addUser">Users</Nav.Link>
+            <Nav.Link className='' href="/productlist"><AiFillShopping size={24}/></Nav.Link>
+            {/* <Nav.Link className='text-white' href="/addUser">Users</Nav.Link> */}
             {/* <NavDropdown className='text-white' title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -32,7 +35,7 @@ const NavBar:React.FC = () => {
             </NavDropdown> */}
           </Nav>
         </Navbar.Collapse>
-            <Nav.Link className='p-1 px-3' href='/shoppingcart'>Cart</Nav.Link>
+            <Nav.Link className='' href='/shoppingcart'><FaShoppingCart size={22}/></Nav.Link>
       </Container>
     </Navbar>
     

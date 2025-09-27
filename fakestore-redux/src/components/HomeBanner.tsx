@@ -7,21 +7,22 @@ const HomeBanner:React.FC = () => {
 
 
   return (
+    <>
 
-    <div className="jacket-banner">
+    <div className="jacket-banner">   
 
-        {jacketBanner.map((jacket, index) => 
+      {jacketBanner.map((jacket, index) => 
         
-        <>
-
         <div key={index} className="jacket-item">
-            <img src={jacket.image} alt={jacket.name} />
-            <Link to='/productlist'>{jacket.name}</Link>
-        </div>
+        <img src={jacket.image} alt={jacket.name} />
+        <Link to='/productlist'>{jacket.name}</Link>
+      </div>
         
-        </>)}
+      )}
         
     </div>
+    
+    </>
 
   )
 }
